@@ -1,5 +1,5 @@
-#' Title
-# Internal function
+
+# Internal functions
 #' @importFrom stats dnorm
 Kern.FUN <- function(zz, zi, bw)
 {
@@ -7,26 +7,10 @@ Kern.FUN <- function(zz, zi, bw)
   dnorm(out)/bw
 }
 
-
-# Internal function
 VTM <- function(vc, dm){
   matrix(vc, ncol=length(vc), nrow=dm, byrow=T)
 }
 
-
-#' Title
-#'
-#' @param xob
-#' @param deltaob
-#' @param aob
-#' @param n
-#' @param t
-#' @param t.0
-#'
-#' @return
-#' @export
-#'
-#' @examples
 WEIGHT <- function(xob, deltaob, aob, n, t, t.0){
   x = xob[aob==0]; delta = 1-deltaob[aob==0]
   xsort = sort(x[delta==1])
@@ -55,20 +39,6 @@ WEIGHT <- function(xob, deltaob, aob, n, t, t.0){
   out = cbind(wei.t0,wei.t,G.t,G.t0,G1,G0,G)#,pte2
 }
 
-
-#' Title
-#'
-#' @param xob
-#' @param deltaob
-#' @param aob
-#' @param n
-#' @param v
-#' @param t
-#' @param t.0
-#'
-#' @return
-#' @export
-#'
 WEIGHT.p <- function(xob, deltaob, aob, n, v, t, t.0){
   x = xob[aob==0];delta = 1-deltaob[aob==0]
   xsort = sort(x[delta==1])
@@ -103,21 +73,6 @@ WEIGHT.p <- function(xob, deltaob, aob, n, v, t, t.0){
   out = cbind(wei.t0,wei.t,G.t,G.t0,G1,G0,G)#,pte2
 }
 
-
-#' Title
-#'
-#' @param vv
-#' @param t
-#' @param t.0
-#' @param data
-#' @param data1
-#' @param data2
-#' @param s
-#' @param nn
-#'
-#' @return
-#' @export
-#'
 #' @importFrom stats sd
 resam <- function(vv, t, t.0, data, data1, data2, s, nn, step){
   n1 = nrow(data1); n2 = nrow(data2)

@@ -38,10 +38,10 @@ library(OSsurvival)
 # load the data
 data("sysdata")
 
-# time surrogate is measured
+# time at which the surrogate is measured
 t.0 = data.example$t.0
 
-# time primary outcome is measured
+# time at which the primary outcome is measured
 t = data.example$t
 
 # observed survival time

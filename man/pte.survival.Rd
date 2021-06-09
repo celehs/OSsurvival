@@ -7,10 +7,24 @@
 pte.survival(xob, s.ob, deltaob, aob, t, t.0, varind = 0, re = 100)
 }
 \arguments{
-\item{re}{}
+\item{xob}{observed survival time}
+
+\item{s.ob}{surrogate information at time t.0}
+
+\item{deltaob}{event indicator}
+
+\item{aob}{treatment indicator}
+
+\item{t}{time at which the primary outcome is measured}
+
+\item{t.0}{time at which the surrogate is measured}
+
+\item{varind}{whether to estimate variance (yes=0, no=1)}
+
+\item{re}{number of replications for resampling}
 }
 \value{
-
+estimated PTE, g1, and g2(s) at equally spaced s point
 }
 \description{
 Main estimation function

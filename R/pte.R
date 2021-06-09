@@ -1,16 +1,16 @@
 #' Main estimation function
 #'
-#' @param xob
-#' @param s.ob
-#' @param deltaob
-#' @param aob
-#' @param t
-#' @param t.0
-#' @param varind
-#' @param re
+#' @param xob observed survival time
+#' @param s.ob surrogate information at time t.0
+#' @param deltaob event indicator
+#' @param aob treatment indicator
+#' @param t time at which the primary outcome is measured
+#' @param t.0 time at which the surrogate is measured
+#' @param varind whether to estimate variance (yes=0, no=1)
+#' @param re number of replications for resampling
 #'
-#' @return
-#' @export
+#' @return estimated PTE, g1, and g2(s) at equally spaced s point
+#' @importFrom stats pnorm rexp
 #'
 pte.survival = function(xob, s.ob, deltaob, aob, t, t.0, varind=0, re=100){
 
