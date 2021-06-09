@@ -1,5 +1,5 @@
 Package: OSsurvival
-Title: Proportion of treatment explained (PTE) estimate for optimally-transformed surrogate with censored primary outcome
+Title: OSsurvival: Optimal Surrogate SUrvival
 Version: 0.1.0
 Authors@R: c(
     person(given = "Xuan", family = "Wang", role = c("aut"),email = "xwang@hsph.harvard.edu"),
@@ -7,7 +7,7 @@ Authors@R: c(
     person(given = "Tianxi", family = "Cai", role = c("aut"), email = "tcai@hsph.harvard.edu"),
     person(family = "PARSE LTD", role = c("aut","cre"), email = "software@parse-health.org")
     )
-Description: The goal of OSsurvival is to nonparametrically estimate the proportion of treatment on the primary outcome explained by a surrogate (PTE) of an optimally transformation of surrogate marker measured at an earlier time. The primary outcome measured at a later time may be subject to censoring.
+Description: The goal of OSsurvival is to estimate the proportion of treatment explained (PTE) for optimally-transformed surrogate with censored primary outcome.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
